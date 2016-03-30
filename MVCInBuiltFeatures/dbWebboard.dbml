@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Webboard" Class="dbWebboardDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=.\SQLExpress;Initial Catalog=Webboard;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="WebboardConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Reply" Member="Replies">
+    <Type Name="Reply">
+      <Column Name="TID" Type="System.String" DbType="NVarChar(16) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="ReplyNO" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="ReplyName" Type="System.String" DbType="NVarChar(16)" CanBeNull="true" />
+      <Column Name="ReplyDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IP" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="Topic_Reply" Member="Topic" ThisKey="TID" OtherKey="TID" Type="Topic" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Topic" Member="Topics">
+    <Type Name="Topic">
+      <Column Name="TID" Type="System.String" DbType="NVarChar(16) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Topic" Member="Topic1" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="UserName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="RecordDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ViewCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ReplyCount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IP" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Association Name="Topic_Reply" Member="Replies" ThisKey="TID" OtherKey="TID" Type="Reply" />
+    </Type>
+  </Table>
+</Database>

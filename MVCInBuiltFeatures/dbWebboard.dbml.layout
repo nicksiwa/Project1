@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="dbWebboard">
+  <DataContextMoniker Name="/dbWebboardDataContext" />
+  <nestedChildShapes>
+    <classShape Id="98503421-8c67-4322-9c61-4ad7ba0ad4c7" absoluteBounds="3.5, 0.5, 2, 1.9631982421875">
+      <DataClassMoniker Name="/dbWebboardDataContext/Reply" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f01943b6-cd1e-45e2-8382-7ce242c2208f" absoluteBounds="3.5149999999999997, 0.96, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0499284c-bb51-451f-bd26-6b68372e213a" absoluteBounds="0.5, 0.5, 2, 2.3478011067708335">
+      <DataClassMoniker Name="/dbWebboardDataContext/Topic" />
+      <nestedChildShapes>
+        <elementListCompartment Id="414f6208-08d9-42fa-8151-223678e9d57c" absoluteBounds="0.51499999999999968, 0.96, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.5 : 1.48159912109375); (3.5 : 1.48159912109375)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/dbWebboardDataContext/Topic/Topic_Reply" />
+      <nodes>
+        <classShapeMoniker Id="0499284c-bb51-451f-bd26-6b68372e213a" />
+        <classShapeMoniker Id="98503421-8c67-4322-9c61-4ad7ba0ad4c7" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

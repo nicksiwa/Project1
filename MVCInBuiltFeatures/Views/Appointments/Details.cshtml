@@ -1,0 +1,50 @@
+﻿@model MVCInBuiltFeatures.Models.Appointment
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Appointment</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.sid)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.sid)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.topic)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.topic)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.date)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.des)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.des)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

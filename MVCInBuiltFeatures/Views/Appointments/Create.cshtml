@@ -1,0 +1,80 @@
+﻿@model MVCInBuiltFeatures.Models.Appointment
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>Appointment</h4>
+        <hr />
+        @Html.ValidationSummary(true)
+        <div class="form-group">
+            @Html.LabelFor(model => model.sid, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.sid)
+                @Html.ValidationMessageFor(model => model.sid)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.topic, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.topic)
+                @Html.ValidationMessageFor(model => model.topic)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.date, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.date)
+                @Html.ValidationMessageFor(model => model.date)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.des, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.des)
+                @Html.ValidationMessageFor(model => model.des)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#date').datepicker({
+            dateFormat: "dd/mm/yy",
+            showStatus: true,
+            showWeeks: true,
+            currentText: 'Now',
+            autoSize: true,
+            gotoCurrent: true,
+            showAnim: 'blind',
+            highlightWeek: true
+        });
+    });
+</script>
+
+}
