@@ -7,46 +7,18 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using MVCInBuiltFeatures.Models;
-using Microsoft.AspNet.Identity.EntityFramework;
-using Microsoft.Reporting.WebForms;
-using System.IO;
-
 
 namespace MVCInBuiltFeatures.Controllers
 {
-
-    public class MyDbContext : IdentityDbContext<ApplicationUser>
-    {
-        new public DbSet<ApplicationDbContext> 
-        Roles { get; set; } 
-        public MyDbContext() : base("DefaultConnection") 
-        { this.Configuration.LazyLoadingEnabled = true; 
-        } }
-
-
-
     public class SResultsController : Controller
     {
         private MedicalDBContext db = new MedicalDBContext();
 
-
-
-
-
-
         // GET: SResults
-      /* [Authorize(Roles = "Doctor,Nurse")]
-        public ActionResult Index(string searchString)
+        public ActionResult Index()
         {
-            var results = from m in db.SResults
-                           select m;
-            if (!String.IsNullOrEmpty(searchString))
-            {
-                results = results.Where(s => s.sid.Contains(searchString));
-            }
-            return View(results);
-
-        }*/
+            return View(db.SResults.ToList());
+        }
 
         // GET: SResults/Details/5
         public ActionResult Details(int? id)
@@ -63,7 +35,6 @@ namespace MVCInBuiltFeatures.Controllers
             return View(sResult);
         }
 
-        [Authorize(Roles = "Doctor")]
         // GET: SResults/Create
         public ActionResult Create()
         {
@@ -87,8 +58,6 @@ namespace MVCInBuiltFeatures.Controllers
             return View(sResult);
         }
 
-
-        [Authorize(Roles = "Doctor")]
         // GET: SResults/Edit/5
         public ActionResult Edit(int? id)
         {
@@ -120,8 +89,6 @@ namespace MVCInBuiltFeatures.Controllers
             return View(sResult);
         }
 
-
-        [Authorize(Roles = "Doctor")]
         // GET: SResults/Delete/5
         public ActionResult Delete(int? id)
         {
@@ -156,10 +123,5 @@ namespace MVCInBuiltFeatures.Controllers
             }
             base.Dispose(disposing);
         }
-
-
-
-
-
     }
 }

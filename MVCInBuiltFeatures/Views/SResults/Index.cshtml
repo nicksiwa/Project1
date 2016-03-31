@@ -6,14 +6,6 @@
 
 <h2>Index</h2>
 
-@using (Html.BeginForm("Index", "SResults", FormMethod.Get))
-{
-    <p>
-        Title: @Html.TextBox("SearchString")
-        <input type="submit" value="ค้นหาโดยรหัสนักศึกษา" />
-    </p>
-}
-
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
@@ -23,10 +15,11 @@
             @Html.DisplayNameFor(model => model.sid)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.date)
+            @Html.DisplayNameFor(model => model.result)
         </th>
-
-        
+        <th>
+            @Html.DisplayNameFor(model => model.medicine)
+        </th>
         <th>
             @Html.DisplayNameFor(model => model.present_illness)
         </th>
@@ -34,14 +27,8 @@
             @Html.DisplayNameFor(model => model.vital_sign)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.result)
+            @Html.DisplayNameFor(model => model.date)
         </th>
-        <th>
-            @Html.DisplayNameFor(model => model.medicine)
-        </th>
-
-
-
         <th></th>
     </tr>
 
@@ -51,30 +38,25 @@
             @Html.DisplayFor(modelItem => item.sid)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.date)
+            @Html.DisplayFor(modelItem => item.result)
         </td>
-
+        <td>
+            @Html.DisplayFor(modelItem => item.medicine)
+        </td>
         <td>
             @Html.DisplayFor(modelItem => item.present_illness)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.vital_sign)
         </td>
-        
         <td>
-            @Html.DisplayFor(modelItem => item.result)
+            @Html.DisplayFor(modelItem => item.date)
         </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.medicine)
-        </td>
-
-
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
             @Html.ActionLink("Details", "Details", new { id=item.ID }) |
             @Html.ActionLink("Delete", "Delete", new { id=item.ID })
         </td>
-
     </tr>
 }
 
