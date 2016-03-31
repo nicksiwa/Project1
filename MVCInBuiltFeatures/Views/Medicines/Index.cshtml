@@ -4,11 +4,17 @@
 @using MVCInBuiltFeatures.Controllers
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "ระบบคลังยา";
 }
 
 <h2>Index</h2>
-
+@using (Html.BeginForm("Index", "Medicines", FormMethod.Get))
+{
+    <p>
+        Title: @Html.TextBox("SearchString")
+        <input type="submit" value="ค้นหาโดยชื่อยา" />
+    </p>
+}
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
@@ -39,7 +45,7 @@
     <tr>
         <td>
             @Html.DisplayFor(modelItem => item.MedName)
-        </td>
+        </td><input id="Button1" type="button" value="button" />
         <td>
             @Html.DisplayFor(modelItem => item.Rem)
         </td>

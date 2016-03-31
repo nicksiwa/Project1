@@ -14,11 +14,25 @@ namespace MVCInBuiltFeatures.Controllers
     {
         private MedicalDBContext db = new MedicalDBContext();
 
+        // GET: Medicines
+        public ActionResult Index(string searchString)
+        {
 
+                var appointments = from m in db.Medicines
+                                   select m;
+                if (!String.IsNullOrEmpty(searchString))
+                {
+                    appointments = appointments.Where(s => s.MedName.Contains(searchString));
+                }
+                return View(appointments);
+            
+         
+           
 
-
-
-
+           // return View();
+        }
+        
+        /*
         // GET: Medicines
         public ActionResult Index(int? id)
         {
@@ -36,11 +50,7 @@ namespace MVCInBuiltFeatures.Controllers
 
             return View(db.Medicines.ToList());
         }
-
-
-
-
-
+     */
 
         // GET: Medicines/Details/5
         public ActionResult Details(int? id)
