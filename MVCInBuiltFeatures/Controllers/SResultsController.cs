@@ -35,7 +35,7 @@ namespace MVCInBuiltFeatures.Controllers
 
 
         // GET: SResults
-       [Authorize(Roles = "Doctor,Nurse")]
+      /* [Authorize(Roles = "Doctor,Nurse")]
         public ActionResult Index(string searchString)
         {
             var results = from m in db.SResults
@@ -46,7 +46,7 @@ namespace MVCInBuiltFeatures.Controllers
             }
             return View(results);
 
-        }
+        }*/
 
         // GET: SResults/Details/5
         public ActionResult Details(int? id)

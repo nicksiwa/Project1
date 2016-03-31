@@ -18,7 +18,7 @@ namespace MVCInBuiltFeatures.Controllers
             private MedicalDBContext db = new MedicalDBContext();
             
         // GET: History
-            public ActionResult Index(string searchString)
+       /*     public ActionResult Index(string searchString)
             {
                 var results = from m in db.SResults
                               join c in db.Students
@@ -39,7 +39,7 @@ namespace MVCInBuiltFeatures.Controllers
                 }
                 return View(results);
 
-            }
+            }*/
 
     }
 }

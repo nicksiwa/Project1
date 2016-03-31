@@ -4,164 +4,87 @@
     ViewBag.Title = "Details";
 }
 
+<h2>Details</h2>
 
-<!DOCTYPE html>
-<html lang="en">
+<div>
+    <h4>Student</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.name)
+        </dt>
 
-<head>
+        <dd>
+            @Html.DisplayFor(model => model.name)
+        </dd>
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="./css/bootstrap.css">
+        <dt>
+            @Html.DisplayNameFor(model => model.sname)
+        </dt>
 
+        <dd>
+            @Html.DisplayFor(model => model.sname)
+        </dd>
 
-    <meta name="description" content="">
-    <meta name="author" content="">
+        <dt>
+            @Html.DisplayNameFor(model => model.tel)
+        </dt>
 
-    <title>ระบบจัดการห้องพยาบาล : มหาวิทยาลัยสงขลานครินทร์ วิทยาเขต ภูเก็ต</title>
+        <dd>
+            @Html.DisplayFor(model => model.tel)
+        </dd>
 
-    <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+        <dt>
+            @Html.DisplayNameFor(model => model.bloodtype)
+        </dt>
 
-    <!-- Custom CSS -->
-    <link href="css/one-page-wonder.css" rel="stylesheet">
+        <dd>
+            @Html.DisplayFor(model => model.bloodtype)
+        </dd>
 
-</head>
+        <dt>
+            @Html.DisplayNameFor(model => model.weight)
+        </dt>
 
-<body>
+        <dd>
+            @Html.DisplayFor(model => model.weight)
+        </dd>
 
+        <dt>
+            @Html.DisplayNameFor(model => model.height)
+        </dt>
 
+        <dd>
+            @Html.DisplayFor(model => model.height)
+        </dd>
 
+        <dt>
+            @Html.DisplayNameFor(model => model.email)
+        </dt>
 
-    <h2>Details</h2>
+        <dd>
+            @Html.DisplayFor(model => model.email)
+        </dd>
 
-    <div>
-        <h4>Student</h4>
-        <hr />
-        
-    </div>
-    <p>
-        @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
-        @Html.ActionLink("Back to List", "Index")
-    </p>
+        <dt>
+            @Html.DisplayNameFor(model => model.drug)
+        </dt>
 
+        <dd>
+            @Html.DisplayFor(model => model.drug)
+        </dd>
 
+        <dt>
+            @Html.DisplayNameFor(model => model.con_disease)
+        </dt>
 
+        <dd>
+            @Html.DisplayFor(model => model.con_disease)
+        </dd>
 
-
-
-
-
-    <div class="container">
-        <div class="row">
-            <div class="col-md-5  toppad  pull-right col-md-offset-3 ">
-
-                <iframe src="http://free.timeanddate.com/clock/i53zv0fk/n1230/tlth/fs12/tt0/tm1/td2/th1/ts1/tb1" frameborder="0" width="180" height="16"></iframe>
-
-
-            </div>
-            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xs-offset-0 col-sm-offset-0 col-md-offset-3 col-lg-offset-3 toppad">
-
-
-                <div class="panel panel-info">
-                    <div class="panel-heading">
-                        <h3 class="panel-title">@Html.DisplayFor(model => model.sid)@Html.DisplayFor(model => model.name)@Html.DisplayFor(model => model.sname)</h3>
-                    </div>
-                    <div class="panel-body">
-                        <div class="row">
-
-                            <!-- รูปโปรไฟล์ !-->
-                            <div class="col-md-3 col-lg-3 " align="center"> <img alt="User Pic" src="http://www.mojosolitservices.com/wp-content/uploads/avatar-1-300x300.png" class="img-circle img-responsive"> </div>
-
-
-                            <div class=" col-md-9 col-lg-9 ">
-                                <table class="table table-user-information">
-                                    <tbody>
-                                        <tr>
-                                            <td>รหัสนักศึกษา :</td>
-                                            <td>@Html.DisplayFor(model => model.sid)</td>
-                                        </tr>
-                                        <tr>
-                                            <td>ชื่อ :</td>
-                                            <td>@Html.DisplayFor(model => model.name)</td>
-                                        </tr>
-                                        <tr>
-                                            <td>นามสกุล :</td>
-                                            <td>@Html.DisplayFor(model => model.sname)</td>
-                                        </tr>
-
-                                        <tr>
-                                            <td>เพศ :</td>
-                                            <td>ชาย</td>
-                                        </tr>
-
-
-                                        <tr>
-                                            <td>หมู่เลือด :</td>
-                                            <td>@Html.DisplayFor(model => model.bloodtype)</td>
-                                        </tr>
-                                        <tr>
-                                            <td>น้ำหนัก :</td>
-                                            <td>@Html.DisplayFor(model => model.weight)</td>
-                                        </tr>
-
-                                        <tr>
-                                            <td>ส่วนสูง :</td>
-                                            <td>@Html.DisplayFor(model => model.height)</td>
-                                        </tr>
-
-
-
-                                        <tr>
-                                            <td>ประวัติการแพ้ยา :</td>
-                                            <td>@Html.DisplayFor(model => model.drug)</td>
-                                        </tr>
-
-                                    <td>โรคประจำตัว :</td>
-                                    <td>@Html.DisplayFor(model => model.con_disease)</td>
-                                    </tr>
-
-                                    <tr>
-                                        <td>Email :</td>
-                                        <td> <a href="mailto:santipong59@gmail.com">@Html.DisplayFor(model => model.email)</a> </td>
-                                    </tr>
-
-                                    <td>เบอร์โทร : </td>
-                                    <td>
-                                        @Html.DisplayFor(model => model.tel)
-                                    </td>
-
-                                    </tr>
-
-                                    </tbody>
-                                </table>
-
-
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div class="panel-footer">
-
-
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-    <!-- /.container -->
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
-
-
-</body>
-
-</html>
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.sid }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

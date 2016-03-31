@@ -233,6 +233,26 @@
     <Compile Include="Migrations\201603290923496_editmed.Designer.cs">
       <DependentUpon>201603290923496_editmed.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201603311526031_editSResultID.cs" />
+    <Compile Include="Migrations\201603311526031_editSResultID.Designer.cs">
+      <DependentUpon>201603311526031_editSResultID.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201603311547196_editPrimaryKeyStudent.cs" />
+    <Compile Include="Migrations\201603311547196_editPrimaryKeyStudent.Designer.cs">
+      <DependentUpon>201603311547196_editPrimaryKeyStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201603311552468_deleteIdStudent.cs" />
+    <Compile Include="Migrations\201603311552468_deleteIdStudent.Designer.cs">
+      <DependentUpon>201603311552468_deleteIdStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201603311610285_editPrimaryKeyStudent1.cs" />
+    <Compile Include="Migrations\201603311610285_editPrimaryKeyStudent1.Designer.cs">
+      <DependentUpon>201603311610285_editPrimaryKeyStudent1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201603311613499_editPrimatyKeyStudent2.cs" />
+    <Compile Include="Migrations\201603311613499_editPrimatyKeyStudent2.Designer.cs">
+      <DependentUpon>201603311613499_editPrimatyKeyStudent2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -243,6 +263,11 @@
       <DependentUpon>MyMVCTrainingDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Result.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Result.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -337,6 +362,17 @@
     <Content Include="MyMVCTrainingDataSet.xss">
       <DependentUpon>MyMVCTrainingDataSet.xsd</DependentUpon>
     </Content>
+    <Content Include="Result.xsc">
+      <DependentUpon>Result.xsd</DependentUpon>
+    </Content>
+    <None Include="Result.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Result.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Result.xss">
+      <DependentUpon>Result.xsd</DependentUpon>
+    </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\cldr.js" />
     <Content Include="Scripts\cldr\event.js" />
@@ -406,11 +442,6 @@
     <Content Include="Views\SResults\Details.cshtml" />
     <Content Include="Views\SResults\Edit.cshtml" />
     <Content Include="Views\SResults\Index.cshtml" />
-    <Content Include="Views\Students\Create.cshtml" />
-    <Content Include="Views\Students\Delete.cshtml" />
-    <Content Include="Views\Students\Details.cshtml" />
-    <Content Include="Views\Students\Edit.cshtml" />
-    <Content Include="Views\Students\Index.cshtml" />
     <Content Include="Views\History\Index.cshtml" />
     <Content Include="Site.Master" />
     <Content Include="Site.Mobile.Master" />
@@ -444,6 +475,11 @@
       <DependentUpon>SResultModel.edmx</DependentUpon>
       <LastGenOutput>SResultModel.cs</LastGenOutput>
     </Content>
+    <Content Include="Views\Students\Create.cshtml" />
+    <Content Include="Views\Students\Delete.cshtml" />
+    <Content Include="Views\Students\Details.cshtml" />
+    <Content Include="Views\Students\Edit.cshtml" />
+    <Content Include="Views\Students\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -479,6 +515,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201603290923496_editmed.resx">
       <DependentUpon>201603290923496_editmed.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201603311526031_editSResultID.resx">
+      <DependentUpon>201603311526031_editSResultID.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201603311547196_editPrimaryKeyStudent.resx">
+      <DependentUpon>201603311547196_editPrimaryKeyStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201603311552468_deleteIdStudent.resx">
+      <DependentUpon>201603311552468_deleteIdStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201603311610285_editPrimaryKeyStudent1.resx">
+      <DependentUpon>201603311610285_editPrimaryKeyStudent1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201603311613499_editPrimatyKeyStudent2.resx">
+      <DependentUpon>201603311613499_editPrimatyKeyStudent2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Report\Report1.rdlc" />
   </ItemGroup>
