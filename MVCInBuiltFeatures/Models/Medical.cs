@@ -12,6 +12,7 @@ namespace MVCInBuiltFeatures.Models
     }
     public class Student
     {
+        [Key]
         public int ID { get; set; }
         [Display(Name = "รหัสนักศึกษา")]
         public string sid { get; set; }
@@ -37,7 +38,6 @@ namespace MVCInBuiltFeatures.Models
 
     public class SResult
     {
-
         public int ID { get; set; }
         [Display(Name = "รหัสนักศึกษา")]
         public string sid { get; set; }

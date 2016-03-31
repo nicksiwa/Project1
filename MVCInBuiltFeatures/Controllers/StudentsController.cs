@@ -13,19 +13,11 @@ namespace MVCInBuiltFeatures.Controllers
     public class StudentsController : Controller
     {
         private MedicalDBContext db = new MedicalDBContext();
-        private ApplicationDbContext context = new ApplicationDbContext();
 
         // GET: Students
-        public ActionResult Index(string searchString)
+        public ActionResult Index()
         {
-            var students = from m in db.Students
-                           select m;
-            if (!String.IsNullOrEmpty(searchString))
-            {
-                students = students.Where(s => s.sid.Contains(searchString));
-            }
-            return View(students);
-
+            return View(db.Students.ToList());
         }
 
         // GET: Students/Details/5
@@ -54,7 +46,7 @@ namespace MVCInBuiltFeatures.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID,sid,name,sname,tel,bloodtype,weight,height,email,drug,con_disease")] Student student)
+        public ActionResult Create([Bind(Include = "sid,name,sname,tel,bloodtype,weight,height,email,drug,con_disease")] Student student)
         {
             if (ModelState.IsValid)
             {
@@ -86,7 +78,7 @@ namespace MVCInBuiltFeatures.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ID,sid,name,sname,tel,bloodtype,weight,height,email,drug,con_disease")] Student student)
+        public ActionResult Edit([Bind(Include = "sid,name,sname,tel,bloodtype,weight,height,email,drug,con_disease")] Student student)
         {
             if (ModelState.IsValid)
             {
