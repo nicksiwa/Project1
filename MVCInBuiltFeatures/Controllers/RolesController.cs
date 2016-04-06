@@ -17,8 +17,15 @@ namespace MVCInBuiltFeatures.Controllers
         public ActionResult GetUsers()
         {
             var users = context.Users.ToList();
+            
+
             return View(users);
+
         }
+
+
+
+
 
 
         //
@@ -45,6 +52,7 @@ namespace MVCInBuiltFeatures.Controllers
             try
             {
                 context.Roles.Add(new Microsoft.AspNet.Identity.EntityFramework.IdentityRole()
+              
                 {
                     Name = collection["RoleName"]
                 });
@@ -57,6 +65,17 @@ namespace MVCInBuiltFeatures.Controllers
                 return View();
             }
         }
+
+
+
+
+
+
+
+
+
+
+
 
         //
         // GET: /Roles/Edit/5
