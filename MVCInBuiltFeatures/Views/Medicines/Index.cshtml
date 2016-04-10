@@ -10,12 +10,7 @@
 <h2>Index</h2>
 @using (Html.BeginForm("Index", "Medicines", FormMethod.Get))
 {
-    <p>
-        Title: @Html.TextBox("SearchString")
-        <input type="submit" value="ค้นหาโดยชื่อยา" />
-    </p>
-}
-<p>
+    
     @Html.ActionLink("Create New", "Create")
 </p>
 <table class="table">
@@ -67,6 +62,7 @@
             @Html.ActionLink("Delete", "Delete", new { id=item.ID }) |
             @Html.ActionLink("Add", "Index", "Medicine", null, new { id = item.ID })
         </td>
+
     </tr>
     
 
