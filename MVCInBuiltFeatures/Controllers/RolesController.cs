@@ -14,11 +14,47 @@ namespace MVCInBuiltFeatures.Controllers
         ApplicationDbContext context = new ApplicationDbContext();
 
 
+
+
+
+
+        public ActionResult UserList()
+        {
+            var userRoles = new List<RolesViewModel>();
+            var context = new ApplicationDbContext();
+            var userStore = new UserStore<ApplicationUser>(context);
+            var userManager = new UserManager<ApplicationUser>(userStore);
+
+
+            foreach (var user in context.Users)
+            {
+                var r = new RolesViewModel()
+                {
+                    UserName = user.UserName,
+             
+                };
+                userRoles.Add(r);
+            }
+
+            return View(userRoles);
+        }
+
+
+
+
+
+
+
+
+
+
+
+
         public ActionResult GetUsers()
         {
-            var users = context.Users.ToList();
-            
 
+            var users = context.Users.ToList();
+           
             return View(users);
 
         }
