@@ -43,11 +43,11 @@ namespace MVCInBuiltFeatures.Models
         public string sid { get; set; }
         [Display(Name = "วินิจฉัย")]
         public string result { get; set; }
-        [Display(Name = "ยา")]
+        [Display(Name = "ยารักษา")]
         public string medicine { get; set; }
         [Display(Name = "อาการที่มาพบ")]
         public string present_illness { get; set; }
-        [Display(Name = "อาการเบื้องต้น")]
+        [Display(Name = "ตรวจร่างกาย")]
         public string vital_sign { get; set; }
         [Display(Name = "วัน/เวลาที่มาตรวจ")]
         [Required(ErrorMessage = "Enter the date.")]

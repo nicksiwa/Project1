@@ -6,6 +6,15 @@
 
 <h2>Index</h2>
 
+
+@using (Html.BeginForm("Index", "SResults", FormMethod.Get))
+{
+    <p>
+        Title: @Html.TextBox("SearchString")
+        <input type="submit" value="ค้นหาโดยรหัสนักศึกษา" />
+    </p>
+}
+
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>

@@ -15,9 +15,17 @@ namespace MVCInBuiltFeatures.Controllers
         private MedicalDBContext db = new MedicalDBContext();
 
         // GET: Students
-        public ActionResult Index()
+        public ActionResult Index(string searchString)
         {
-            return View(db.Students.ToList());
+
+            var appointments = from m in db.Students
+                               select m;
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                appointments = appointments.Where(s => s.sid.Contains(searchString));
+            }
+            return View(appointments);
+            
         }
 
         // GET: Students/Details/5
