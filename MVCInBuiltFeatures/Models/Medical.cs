@@ -102,7 +102,13 @@ namespace MVCInBuiltFeatures.Models
         
     }
 
-
+    public class LoginStatus 
+    {
+        public int ID { get; set; }
+        public string UserName { get; set; }
+        public string Status { get; set; }
+       
+    }
 
     public class MedicalDBContext : DbContext
     {
@@ -111,6 +117,8 @@ namespace MVCInBuiltFeatures.Models
         public DbSet<Appointment> Appointments { get; set; }
         public DbSet<Info> Info { get; set; }
         public DbSet<Medicine> Medicines { get; set; }
+
+        public System.Data.Entity.DbSet<MVCInBuiltFeatures.Models.LoginStatus> LoginStatus { get; set; }
 
     }
 }

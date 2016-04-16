@@ -201,6 +201,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\InfoesController.cs" />
     <Compile Include="Controllers\Item.cs" />
+    <Compile Include="Controllers\LoginStatusController.cs" />
     <Compile Include="Controllers\MedicinesController.cs" />
     <Compile Include="Controllers\ProfileController.cs" />
     <Compile Include="Controllers\ReportController.cs" />
@@ -480,6 +481,11 @@
     <Content Include="Views\SResults\Details.cshtml" />
     <Content Include="Views\SResults\Edit.cshtml" />
     <Content Include="Views\SResults\Index.cshtml" />
+    <Content Include="Views\LoginStatus\Create.cshtml" />
+    <Content Include="Views\LoginStatus\Delete.cshtml" />
+    <Content Include="Views\LoginStatus\Details.cshtml" />
+    <Content Include="Views\LoginStatus\Edit.cshtml" />
+    <Content Include="Views\LoginStatus\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
