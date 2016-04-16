@@ -19,8 +19,9 @@ namespace MVCInBuiltFeatures.Controllers
         {
             using (MedicalDBContext dc = new MedicalDBContext())
             {
-                var v = dc.SResults.ToList();
-                return View(v);
+                //var v = dc.SResults.ToList();
+                //return View(v);
+                return View();
             }
         }
 
@@ -41,13 +42,13 @@ namespace MVCInBuiltFeatures.Controllers
             {
                 return View("Index");
             }
-            List<SResult> cm = new List<SResult>();
+           // List<SResult> cm = new List<SResult>();
             using (MedicalDBContext dc = new MedicalDBContext())
             {
-                cm = dc.SResults.ToList();
+                //cm = dc.SResults.ToList();
             }
-            ReportDataSource rd = new ReportDataSource("MyMVCTrainingDataSet", cm);
-            lr.DataSources.Add(rd);
+            //ReportDataSource rd = new ReportDataSource("MyMVCTrainingDataSet", cm);
+            //lr.DataSources.Add(rd);
             string reportType = id;
             string mimeType;
             string encoding;

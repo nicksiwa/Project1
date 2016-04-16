@@ -17,12 +17,7 @@ namespace MVCInBuiltFeatures.Controllers
         // GET: SResults
         public ActionResult Index()
         {
-
-            var SResults = from m in db.SResults
-                               select m;
-           
-            return View(SResults);
-            
+            return View(db.SResults.ToList());
         }
 
         // GET: SResults/Details/5
@@ -51,7 +46,7 @@ namespace MVCInBuiltFeatures.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID,sid,result,medicine,present_illness,vital_sign,date")] SResult sResult)
+        public ActionResult Create([Bind(Include = "ID,SResultID,result,medicine,present_illness,vital_sign,date")] SResult sResult)
         {
             if (ModelState.IsValid)
             {
@@ -83,7 +78,7 @@ namespace MVCInBuiltFeatures.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ID,sid,result,medicine,present_illness,vital_sign,date")] SResult sResult)
+        public ActionResult Edit([Bind(Include = "ID,SResultID,result,medicine,present_illness,vital_sign,date")] SResult sResult)
         {
             if (ModelState.IsValid)
             {

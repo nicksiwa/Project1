@@ -6,22 +6,13 @@
 
 <h2>Index</h2>
 
-
-@using (Html.BeginForm("Index", "SResults", FormMethod.Get))
-{
-    <p>
-        Title: @Html.TextBox("SearchString")
-        <input type="submit" value="ค้นหาโดยรหัสนักศึกษา" />
-    </p>
-}
-
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.sid)
+            @Html.DisplayNameFor(model => model.SResultID)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.result)
@@ -44,7 +35,7 @@
 @foreach (var item in Model) {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.sid)
+            @Html.DisplayFor(modelItem => item.SResultID)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.result)

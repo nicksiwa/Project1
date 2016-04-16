@@ -4,6 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Data.Entity;
 using System.Linq;
 using System.Web;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace MVCInBuiltFeatures.Models
 {
@@ -36,26 +37,7 @@ namespace MVCInBuiltFeatures.Models
         public string con_disease { get; set; }
     }
 
-    public class SResult
-    {
-        public int ID { get; set; }
-        [Display(Name = "วินิจฉัย")]
-        public string result { get; set; }
-        [Display(Name = "ยารักษา")]
-        public string medicine { get; set; }
-        [Display(Name = "อาการที่มาพบ")]
-        public string present_illness { get; set; }
-        [Display(Name = "ตรวจร่างกาย")]
-        public string vital_sign { get; set; }
-        [Display(Name = "วัน/เวลาที่มาตรวจ")]
-        [Required(ErrorMessage = "Enter the date.")]
-        [DataType(DataType.Date)]
-        public DateTime date { get; set; }
-
-        public virtual Student Student { get; set; }
-
-
-    }
+  
 
     public class Appointment
     {
@@ -110,6 +92,30 @@ namespace MVCInBuiltFeatures.Models
         public string UserName { get; set; }
         public string Status { get; set; }
        
+    }
+
+
+
+    public class SResult
+    {
+        public int SResultID { get; set; }
+        [Display(Name = "วินิจฉัย")]
+        public string result { get; set; }
+        [Display(Name = "ยารักษา")]
+        public string medicine { get; set; }
+        [Display(Name = "อาการที่มาพบ")]
+        public string present_illness { get; set; }
+        [Display(Name = "ตรวจร่างกาย")]
+        public string vital_sign { get; set; }
+        [Display(Name = "วัน/เวลาที่มาตรวจ")]
+        [Required(ErrorMessage = "Enter the date.")]
+        [DataType(DataType.Date)]
+        public DateTime date { get; set; }
+
+        public int ID { get; set; }
+        public virtual Student Student { get; set; }
+
+
     }
 
     public class MedicalDBContext : DbContext
