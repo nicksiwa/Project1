@@ -39,8 +39,6 @@ namespace MVCInBuiltFeatures.Models
     public class SResult
     {
         public int ID { get; set; }
-        [Display(Name = "รหัสนักศึกษา")]
-        public string sid { get; set; }
         [Display(Name = "วินิจฉัย")]
         public string result { get; set; }
         [Display(Name = "ยารักษา")]
@@ -53,6 +51,10 @@ namespace MVCInBuiltFeatures.Models
         [Required(ErrorMessage = "Enter the date.")]
         [DataType(DataType.Date)]
         public DateTime date { get; set; }
+
+        public virtual Student Student { get; set; }
+
+
     }
 
     public class Appointment
