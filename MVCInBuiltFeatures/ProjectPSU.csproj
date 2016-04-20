@@ -201,6 +201,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\InfoesController.cs" />
     <Compile Include="Controllers\Item.cs" />
+    <Compile Include="Controllers\LoginStatusController.cs" />
     <Compile Include="Controllers\MedicinesController.cs" />
     <Compile Include="Controllers\ProfileController.cs" />
     <Compile Include="Controllers\ReportController.cs" />
@@ -252,6 +253,22 @@
     <Compile Include="Migrations\201603311613499_editPrimatyKeyStudent2.cs" />
     <Compile Include="Migrations\201603311613499_editPrimatyKeyStudent2.Designer.cs">
       <DependentUpon>201603311613499_editPrimatyKeyStudent2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201604161648324_EditDB.cs" />
+    <Compile Include="Migrations\201604161648324_EditDB.Designer.cs">
+      <DependentUpon>201604161648324_EditDB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201604161715524_DeleteSResult.cs" />
+    <Compile Include="Migrations\201604161715524_DeleteSResult.Designer.cs">
+      <DependentUpon>201604161715524_DeleteSResult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201604161718272_AddSResult.cs" />
+    <Compile Include="Migrations\201604161718272_AddSResult.Designer.cs">
+      <DependentUpon>201604161718272_AddSResult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201604161741507_EditMoreComplex.cs" />
+    <Compile Include="Migrations\201604161741507_EditMoreComplex.Designer.cs">
+      <DependentUpon>201604161741507_EditMoreComplex.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -475,6 +492,11 @@
     <Content Include="Views\Students\Details.cshtml" />
     <Content Include="Views\Students\Edit.cshtml" />
     <Content Include="Views\Students\Index.cshtml" />
+    <Content Include="Views\LoginStatus\Create.cshtml" />
+    <Content Include="Views\LoginStatus\Delete.cshtml" />
+    <Content Include="Views\LoginStatus\Details.cshtml" />
+    <Content Include="Views\LoginStatus\Edit.cshtml" />
+    <Content Include="Views\LoginStatus\Index.cshtml" />
     <Content Include="Views\SResults\Create.cshtml" />
     <Content Include="Views\SResults\Delete.cshtml" />
     <Content Include="Views\SResults\Details.cshtml" />
@@ -530,6 +552,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201603311613499_editPrimatyKeyStudent2.resx">
       <DependentUpon>201603311613499_editPrimatyKeyStudent2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201604161648324_EditDB.resx">
+      <DependentUpon>201604161648324_EditDB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201604161715524_DeleteSResult.resx">
+      <DependentUpon>201604161715524_DeleteSResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201604161718272_AddSResult.resx">
+      <DependentUpon>201604161718272_AddSResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201604161741507_EditMoreComplex.resx">
+      <DependentUpon>201604161741507_EditMoreComplex.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Report\Report1.rdlc" />
   </ItemGroup>

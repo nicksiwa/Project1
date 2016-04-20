@@ -10,107 +10,107 @@ using MVCInBuiltFeatures.Models;
 
 namespace MVCInBuiltFeatures.Controllers
 {
-    public class SResultsController : Controller
+    public class LoginStatusController : Controller
     {
         private MedicalDBContext db = new MedicalDBContext();
 
-        // GET: SResults
+        // GET: LoginStatus
         public ActionResult Index()
         {
-            return View(db.SResults.ToList());
+            return View(db.LoginStatus.ToList());
         }
 
-        // GET: SResults/Details/5
+        // GET: LoginStatus/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            SResult sResult = db.SResults.Find(id);
-            if (sResult == null)
+            LoginStatus loginStatus = db.LoginStatus.Find(id);
+            if (loginStatus == null)
             {
                 return HttpNotFound();
             }
-            return View(sResult);
+            return View(loginStatus);
         }
 
-        // GET: SResults/Create
+        // GET: LoginStatus/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: SResults/Create
+        // POST: LoginStatus/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID,SResultID,result,medicine,present_illness,vital_sign,date")] SResult sResult)
+        public ActionResult Create([Bind(Include = "ID,UserName,Status")] LoginStatus loginStatus)
         {
             if (ModelState.IsValid)
             {
-                db.SResults.Add(sResult);
+                db.LoginStatus.Add(loginStatus);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            return View(sResult);
+            return View(loginStatus);
         }
 
-        // GET: SResults/Edit/5
+        // GET: LoginStatus/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            SResult sResult = db.SResults.Find(id);
-            if (sResult == null)
+            LoginStatus loginStatus = db.LoginStatus.Find(id);
+            if (loginStatus == null)
             {
                 return HttpNotFound();
             }
-            return View(sResult);
+            return View(loginStatus);
         }
 
-        // POST: SResults/Edit/5
+        // POST: LoginStatus/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ID,SResultID,result,medicine,present_illness,vital_sign,date")] SResult sResult)
+        public ActionResult Edit([Bind(Include = "ID,UserName,Status")] LoginStatus loginStatus)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(sResult).State = EntityState.Modified;
+                db.Entry(loginStatus).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(sResult);
+            return View(loginStatus);
         }
 
-        // GET: SResults/Delete/5
+        // GET: LoginStatus/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            SResult sResult = db.SResults.Find(id);
-            if (sResult == null)
+            LoginStatus loginStatus = db.LoginStatus.Find(id);
+            if (loginStatus == null)
             {
                 return HttpNotFound();
             }
-            return View(sResult);
+            return View(loginStatus);
         }
 
-        // POST: SResults/Delete/5
+        // POST: LoginStatus/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            SResult sResult = db.SResults.Find(id);
-            db.SResults.Remove(sResult);
+            LoginStatus loginStatus = db.LoginStatus.Find(id);
+            db.LoginStatus.Remove(loginStatus);
             db.SaveChanges();
             return RedirectToAction("Index");
         }
