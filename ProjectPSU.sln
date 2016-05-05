@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.40629.0
+VisualStudioVersion = 12.0.30723.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectPSU", "MVCInBuiltFeatures\ProjectPSU.csproj", "{BC9DDC26-D46D-4CB6-B98C-8E5C6B9EE3E9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "myService", "..\..\..\Desktop\myService\myService.csproj", "{11977CD2-44FD-4D52-99F4-52D35D41E464}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{BC9DDC26-D46D-4CB6-B98C-8E5C6B9EE3E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BC9DDC26-D46D-4CB6-B98C-8E5C6B9EE3E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BC9DDC26-D46D-4CB6-B98C-8E5C6B9EE3E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{11977CD2-44FD-4D52-99F4-52D35D41E464}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{11977CD2-44FD-4D52-99F4-52D35D41E464}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11977CD2-44FD-4D52-99F4-52D35D41E464}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{11977CD2-44FD-4D52-99F4-52D35D41E464}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
