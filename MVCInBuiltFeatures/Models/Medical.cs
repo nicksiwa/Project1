@@ -98,6 +98,7 @@ namespace MVCInBuiltFeatures.Models
 
     public class SResult
     {
+        [Display(Name = "หมายเลขนัด")]
         public int SResultID { get; set; }
         [Display(Name = "วินิจฉัย")]
         public string result { get; set; }
