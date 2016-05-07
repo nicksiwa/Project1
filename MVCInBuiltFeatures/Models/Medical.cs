@@ -77,10 +77,7 @@ namespace MVCInBuiltFeatures.Models
         public string MedType { get; set; }
           [Display(Name = "หมวดยา")]
         public string MedGroup { get; set; }
-          [Display(Name = "กลุ่มรายการ")]
-        public string GrouList { get; set; }
-          [Display(Name = "กลุ่มควบคุม")]
-        public string GrouCon { get; set; }
+          
         
         [Display(Name = "จำนวนยาที่มี")]
         public string Rem { get; set; }
