@@ -1,10 +1,5 @@
 ﻿@model MVCInBuiltFeatures.Models.Medicine
 
-
-@using MVCInBuiltFeatures.Controllers
-
-
-
 @{
     ViewBag.Title = "Details";
 }
@@ -24,19 +19,51 @@
         </dd>
 
         <dt>
+            @Html.DisplayNameFor(model => model.MedTrade)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MedTrade)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MedType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MedType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MedGroup)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MedGroup)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GrouList)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GrouList)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GrouCon)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GrouCon)
+        </dd>
+
+        <dt>
             @Html.DisplayNameFor(model => model.Rem)
         </dt>
 
         <dd>
             @Html.DisplayFor(model => model.Rem)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Size)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Size)
         </dd>
 
         <dt>
@@ -47,26 +74,9 @@
             @Html.DisplayFor(model => model.Unit)
         </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Description)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Description)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.EXP)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.EXP)
-        </dd>
-
     </dl>
 </div>
 <p>
     @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
     @Html.ActionLink("Back to List", "Index")
 </p>
-

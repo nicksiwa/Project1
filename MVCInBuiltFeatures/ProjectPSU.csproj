@@ -270,6 +270,10 @@
     <Compile Include="Migrations\201604161741507_EditMoreComplex.Designer.cs">
       <DependentUpon>201604161741507_EditMoreComplex.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201605061628560_newMed.cs" />
+    <Compile Include="Migrations\201605061628560_newMed.Designer.cs">
+      <DependentUpon>201605061628560_newMed.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -463,12 +467,6 @@
     <Content Include="Views\Infoes\Details.cshtml" />
     <Content Include="Views\Infoes\Edit.cshtml" />
     <Content Include="Views\Infoes\Index.cshtml" />
-    <Content Include="Views\Medicines\Create.cshtml" />
-    <Content Include="Views\Medicines\Delete.cshtml" />
-    <Content Include="Views\Medicines\Details.cshtml" />
-    <Content Include="Views\Medicines\Edit.cshtml" />
-    <Content Include="Views\Medicines\Index.cshtml" />
-    <Content Include="Views\Medicines\List.cshtml" />
     <Content Include="Views\Report\Index.cshtml" />
     <EntityDeploy Include="SResultModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
@@ -502,6 +500,11 @@
     <Content Include="Views\SResults\Details.cshtml" />
     <Content Include="Views\SResults\Edit.cshtml" />
     <Content Include="Views\SResults\Index.cshtml" />
+    <Content Include="Views\Medicines\Create.cshtml" />
+    <Content Include="Views\Medicines\Delete.cshtml" />
+    <Content Include="Views\Medicines\Details.cshtml" />
+    <Content Include="Views\Medicines\Edit.cshtml" />
+    <Content Include="Views\Medicines\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -564,6 +567,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201604161741507_EditMoreComplex.resx">
       <DependentUpon>201604161741507_EditMoreComplex.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201605061628560_newMed.resx">
+      <DependentUpon>201605061628560_newMed.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Report\Report1.rdlc" />
   </ItemGroup>

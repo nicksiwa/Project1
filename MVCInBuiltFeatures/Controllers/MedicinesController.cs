@@ -15,42 +15,10 @@ namespace MVCInBuiltFeatures.Controllers
         private MedicalDBContext db = new MedicalDBContext();
 
         // GET: Medicines
-        public ActionResult Index(string searchString)
+        public ActionResult Index()
         {
-
-                var appointments = from m in db.Medicines
-                                   select m;
-                if (!String.IsNullOrEmpty(searchString))
-                {
-                    appointments = appointments.Where(s => s.MedName.Contains(searchString));
-                }
-                return View(appointments);
-            
-         
-           
-
-           // return View();
-        }
-        
-        /*
-        // GET: Medicines
-        public ActionResult Index(int? id)
-        {
-
-            if (Session["list"] == null)
-            {
-                List<Item> list = new List<Item>();
-                list.Add(new Item(db.Medicines.Find(id), 1));
-                Session["list"] = list;
-            }
-            else
-            {
-
-            }
-
             return View(db.Medicines.ToList());
         }
-     */
 
         // GET: Medicines/Details/5
         public ActionResult Details(int? id)
@@ -78,7 +46,7 @@ namespace MVCInBuiltFeatures.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID,MedName,Rem,Size,Unit,Description,EXP")] Medicine medicine)
+        public ActionResult Create([Bind(Include = "ID,MedName,MedTrade,MedType,MedGroup,GrouList,GrouCon,Rem,Unit")] Medicine medicine)
         {
             if (ModelState.IsValid)
             {
@@ -110,7 +78,7 @@ namespace MVCInBuiltFeatures.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ID,MedName,Rem,Size,Unit,Description,EXP")] Medicine medicine)
+        public ActionResult Edit([Bind(Include = "ID,MedName,MedTrade,MedType,MedGroup,GrouList,GrouCon,Rem,Unit")] Medicine medicine)
         {
             if (ModelState.IsValid)
             {

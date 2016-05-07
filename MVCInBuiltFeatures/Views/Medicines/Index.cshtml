@@ -1,17 +1,12 @@
 ﻿@model IEnumerable<MVCInBuiltFeatures.Models.Medicine>
 
-
-@using MVCInBuiltFeatures.Controllers
-
 @{
-    ViewBag.Title = "ระบบคลังยา";
+    ViewBag.Title = "Index";
 }
 
 <h2>Index</h2>
 
-@using (Html.BeginForm("Index", "Medicines", FormMethod.Get))
-{
-    
+<p>
     @Html.ActionLink("Create New", "Create")
 </p>
 <table class="table">
@@ -20,19 +15,25 @@
             @Html.DisplayNameFor(model => model.MedName)
         </th>
         <th>
+            @Html.DisplayNameFor(model => model.MedTrade)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MedType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MedGroup)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GrouList)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GrouCon)
+        </th>
+        <th>
             @Html.DisplayNameFor(model => model.Rem)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Size)
-        </th>
-        <th>
             @Html.DisplayNameFor(model => model.Unit)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Description)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.EXP)
         </th>
         <th></th>
     </tr>
@@ -43,32 +44,32 @@
             @Html.DisplayFor(modelItem => item.MedName)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Rem)
+            @Html.DisplayFor(modelItem => item.MedTrade)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Size)
+            @Html.DisplayFor(modelItem => item.MedType)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MedGroup)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GrouList)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GrouCon)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Rem)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Unit)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Description)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.EXP)
-        </td>
-        <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
             @Html.ActionLink("Details", "Details", new { id=item.ID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.ID }) |
-            @Html.ActionLink("Add", "Index", "Medicine", null, new { id = item.ID })
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
         </td>
-
     </tr>
-    
-
-    
-
 }
 
 </table>

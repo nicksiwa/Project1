@@ -71,18 +71,23 @@ namespace MVCInBuiltFeatures.Models
         public int ID { get; set; }
         [Display(Name = "ชื่อสามัญทางยา")]
         public string MedName { get; set; }
+        [Display(Name = "ชื่อทางการค้า")]
+        public string MedTrade { get; set; }
+          [Display(Name = "ประเภทยา")]
+        public string MedType { get; set; }
+          [Display(Name = "หมวดยา")]
+        public string MedGroup { get; set; }
+          [Display(Name = "กลุ่มรายการ")]
+        public string GrouList { get; set; }
+          [Display(Name = "กลุ่มควบคุม")]
+        public string GrouCon { get; set; }
+        
         [Display(Name = "จำนวนยาที่มี")]
         public string Rem { get; set; }
-        [Display(Name = "ขนาด")]
-        public string Size { get; set; }
+ 
         [Display(Name = "หน่วย")]
         public string Unit { get; set; }
-        [Display(Name = "คำอธิบาย")]
-        public string Description { get; set; }
-        [Display(Name = "วันหมดอายุ")]
-        [Required(ErrorMessage = "Enter the date.")]
-        [DataType(DataType.Date)]
-        public DateTime EXP { get; set; }
+       
         
     }
 
