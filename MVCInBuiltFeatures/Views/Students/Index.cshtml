@@ -6,22 +6,13 @@
 
 <h2>Index</h2>
 
-@using (Html.BeginForm("Index", "Students", FormMethod.Get))
-{
-    <p>
-        Title: @Html.TextBox("SearchString")
-        <input type="submit" value="ค้นหาโดยรหัสนักศึกษา" />
-    </p>
-}
-
-
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.sid)
+            @Html.DisplayNameFor(model => model.sid_t)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.name)
@@ -56,7 +47,7 @@
 @foreach (var item in Model) {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.sid)
+            @Html.DisplayFor(modelItem => item.sid_t)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.name)
@@ -86,9 +77,9 @@
             @Html.DisplayFor(modelItem => item.con_disease)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.sid }) |
-            @Html.ActionLink("Details", "Details", new { id=item.sid }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.sid })
+            @Html.ActionLink("Edit", "Edit", new { id=item.StudentID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.StudentID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.StudentID })
         </td>
     </tr>
 }

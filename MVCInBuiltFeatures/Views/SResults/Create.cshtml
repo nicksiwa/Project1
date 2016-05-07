@@ -14,12 +14,6 @@
         <h4>SResult</h4>
         <hr />
         @Html.ValidationSummary(true)
-
-
-     
-
-
-
         <div class="form-group">
             @Html.LabelFor(model => model.SResultID, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
@@ -27,29 +21,6 @@
                 @Html.ValidationMessageFor(model => model.SResultID)
             </div>
         </div>
-
-
-
-
-
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.present_illness, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.present_illness)
-                @Html.ValidationMessageFor(model => model.present_illness)
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.vital_sign, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.vital_sign)
-                @Html.ValidationMessageFor(model => model.vital_sign)
-            </div>
-        </div>
-
-
 
         <div class="form-group">
             @Html.LabelFor(model => model.result, htmlAttributes: new { @class = "control-label col-md-2" })
@@ -67,9 +38,21 @@
             </div>
         </div>
 
-       
+        <div class="form-group">
+            @Html.LabelFor(model => model.present_illness, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.present_illness)
+                @Html.ValidationMessageFor(model => model.present_illness)
+            </div>
+        </div>
 
-        
+        <div class="form-group">
+            @Html.LabelFor(model => model.vital_sign, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.vital_sign)
+                @Html.ValidationMessageFor(model => model.vital_sign)
+            </div>
+        </div>
 
         <div class="form-group">
             @Html.LabelFor(model => model.date, htmlAttributes: new { @class = "control-label col-md-2" })
@@ -79,7 +62,13 @@
             </div>
         </div>
 
- 
+        <div class="form-group">
+            @Html.LabelFor(model => model.StudentID, "StudentID", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("StudentID", String.Empty)
+                @Html.ValidationMessageFor(model => model.StudentID)
+            </div>
+        </div>
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">

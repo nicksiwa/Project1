@@ -13,10 +13,10 @@ namespace MVCInBuiltFeatures.Models
     }
     public class Student
     {
-        [Key]
-        public int ID { get; set; }
+       
+        public int StudentID { get; set; }
         [Display(Name = "รหัสนักศึกษา")]
-        public string sid { get; set; }
+        public string sid_t { get; set; }
         [Display(Name = "ชื่อ")]
         public string name { get; set; }
         [Display(Name = "นามสกุล")]
@@ -35,6 +35,8 @@ namespace MVCInBuiltFeatures.Models
         public string drug { get; set; }
         [Display(Name = "โรคประจำตัว")]
         public string con_disease { get; set; }
+
+        public virtual ICollection<SResult> SResults { get; set; }
     }
 
   
@@ -73,18 +75,16 @@ namespace MVCInBuiltFeatures.Models
         public string MedName { get; set; }
         [Display(Name = "ชื่อทางการค้า")]
         public string MedTrade { get; set; }
-          [Display(Name = "ประเภทยา")]
+        [Display(Name = "ประเภทยา")]
         public string MedType { get; set; }
-          [Display(Name = "หมวดยา")]
+        [Display(Name = "หมวดยา")]
         public string MedGroup { get; set; }
-          
-        
         [Display(Name = "จำนวนยาที่มี")]
         public string Rem { get; set; }
- 
         [Display(Name = "หน่วย")]
         public string Unit { get; set; }
-       
+
+     
         
     }
 
@@ -99,7 +99,8 @@ namespace MVCInBuiltFeatures.Models
 
 
     public class SResult
-    {
+    {       
+        public int ID { get; set; }
         [Display(Name = "หมายเลขนัด")]
         public int SResultID { get; set; }
         [Display(Name = "วินิจฉัย")]
@@ -115,9 +116,10 @@ namespace MVCInBuiltFeatures.Models
         [DataType(DataType.Date)]
         public DateTime date { get; set; }
 
-        public int ID { get; set; }
-        public virtual Student Student { get; set; }
 
+
+        public int StudentID { get; set; }
+        public virtual Student Student { get; set; }
 
     }
 

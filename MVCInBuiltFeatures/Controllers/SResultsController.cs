@@ -17,7 +17,8 @@ namespace MVCInBuiltFeatures.Controllers
         // GET: SResults
         public ActionResult Index()
         {
-            return View(db.SResults.ToList());
+            var sResults = db.SResults.Include(s => s.Student);
+            return View(sResults.ToList());
         }
 
         // GET: SResults/Details/5
@@ -38,6 +39,7 @@ namespace MVCInBuiltFeatures.Controllers
         // GET: SResults/Create
         public ActionResult Create()
         {
+            ViewBag.StudentID = new SelectList(db.Students, "StudentID", "sid_t");
             return View();
         }
 
@@ -46,7 +48,7 @@ namespace MVCInBuiltFeatures.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID,SResultID,result,medicine,present_illness,vital_sign,date")] SResult sResult)
+        public ActionResult Create([Bind(Include = "ID,SResultID,result,medicine,present_illness,vital_sign,date,StudentID")] SResult sResult)
         {
             if (ModelState.IsValid)
             {
@@ -55,6 +57,7 @@ namespace MVCInBuiltFeatures.Controllers
                 return RedirectToAction("Index");
             }
 
+            ViewBag.StudentID = new SelectList(db.Students, "StudentID", "sid_t", sResult.StudentID);
             return View(sResult);
         }
 
@@ -70,6 +73,7 @@ namespace MVCInBuiltFeatures.Controllers
             {
                 return HttpNotFound();
             }
+            ViewBag.StudentID = new SelectList(db.Students, "StudentID", "sid_t", sResult.StudentID);
             return View(sResult);
         }
 
@@ -78,7 +82,7 @@ namespace MVCInBuiltFeatures.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ID,SResultID,result,medicine,present_illness,vital_sign,date")] SResult sResult)
+        public ActionResult Edit([Bind(Include = "ID,SResultID,result,medicine,present_illness,vital_sign,date,StudentID")] SResult sResult)
         {
             if (ModelState.IsValid)
             {
@@ -86,6 +90,7 @@ namespace MVCInBuiltFeatures.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
+            ViewBag.StudentID = new SelectList(db.Students, "StudentID", "sid_t", sResult.StudentID);
             return View(sResult);
         }
 

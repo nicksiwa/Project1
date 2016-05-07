@@ -278,6 +278,30 @@
     <Compile Include="Migrations\201605071416121_editMed2.Designer.cs">
       <DependentUpon>201605071416121_editMed2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201605071714440_editDBCom.cs" />
+    <Compile Include="Migrations\201605071714440_editDBCom.Designer.cs">
+      <DependentUpon>201605071714440_editDBCom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201605071728431_editDBCom2.cs" />
+    <Compile Include="Migrations\201605071728431_editDBCom2.Designer.cs">
+      <DependentUpon>201605071728431_editDBCom2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201605071735205_1.cs" />
+    <Compile Include="Migrations\201605071735205_1.Designer.cs">
+      <DependentUpon>201605071735205_1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201605071736430_2.cs" />
+    <Compile Include="Migrations\201605071736430_2.Designer.cs">
+      <DependentUpon>201605071736430_2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201605071739354_3.cs" />
+    <Compile Include="Migrations\201605071739354_3.Designer.cs">
+      <DependentUpon>201605071739354_3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201605072038477_5.cs" />
+    <Compile Include="Migrations\201605072038477_5.Designer.cs">
+      <DependentUpon>201605072038477_5.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -489,26 +513,26 @@
       <DependentUpon>SResultModel.edmx</DependentUpon>
       <LastGenOutput>SResultModel.cs</LastGenOutput>
     </Content>
-    <Content Include="Views\Students\Create.cshtml" />
-    <Content Include="Views\Students\Delete.cshtml" />
-    <Content Include="Views\Students\Details.cshtml" />
-    <Content Include="Views\Students\Edit.cshtml" />
-    <Content Include="Views\Students\Index.cshtml" />
     <Content Include="Views\LoginStatus\Create.cshtml" />
     <Content Include="Views\LoginStatus\Delete.cshtml" />
     <Content Include="Views\LoginStatus\Details.cshtml" />
     <Content Include="Views\LoginStatus\Edit.cshtml" />
     <Content Include="Views\LoginStatus\Index.cshtml" />
-    <Content Include="Views\SResults\Create.cshtml" />
-    <Content Include="Views\SResults\Delete.cshtml" />
-    <Content Include="Views\SResults\Details.cshtml" />
-    <Content Include="Views\SResults\Edit.cshtml" />
-    <Content Include="Views\SResults\Index.cshtml" />
     <Content Include="Views\Medicines\Create.cshtml" />
     <Content Include="Views\Medicines\Delete.cshtml" />
     <Content Include="Views\Medicines\Details.cshtml" />
     <Content Include="Views\Medicines\Edit.cshtml" />
     <Content Include="Views\Medicines\Index.cshtml" />
+    <Content Include="Views\Students\Create.cshtml" />
+    <Content Include="Views\Students\Delete.cshtml" />
+    <Content Include="Views\Students\Details.cshtml" />
+    <Content Include="Views\Students\Edit.cshtml" />
+    <Content Include="Views\Students\Index.cshtml" />
+    <Content Include="Views\SResults\Create.cshtml" />
+    <Content Include="Views\SResults\Delete.cshtml" />
+    <Content Include="Views\SResults\Details.cshtml" />
+    <Content Include="Views\SResults\Edit.cshtml" />
+    <Content Include="Views\SResults\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -577,6 +601,24 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201605071416121_editMed2.resx">
       <DependentUpon>201605071416121_editMed2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201605071714440_editDBCom.resx">
+      <DependentUpon>201605071714440_editDBCom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201605071728431_editDBCom2.resx">
+      <DependentUpon>201605071728431_editDBCom2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201605071735205_1.resx">
+      <DependentUpon>201605071735205_1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201605071736430_2.resx">
+      <DependentUpon>201605071736430_2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201605071739354_3.resx">
+      <DependentUpon>201605071739354_3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201605072038477_5.resx">
+      <DependentUpon>201605072038477_5.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Report\Report1.rdlc" />
   </ItemGroup>
