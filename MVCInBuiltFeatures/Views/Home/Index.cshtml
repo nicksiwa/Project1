@@ -29,3 +29,36 @@
         <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
     </div>
 </div>
+
+
+@if (ViewBag.YouSelected != null)
+{
+
+    <div> You Selected:  @ViewBag.YouSelected</div>
+
+}
+
+@using (Html.BeginForm())
+{
+
+    <fieldset>
+
+        <legend>Multi-Select Demo</legend>
+
+        <div class="editor-field">
+
+            @Html.ListBox("listItems", ViewBag.Countrieslist as MultiSelectList
+
+            )
+
+        </div>
+
+        <p>
+
+            <input type="submit" value="Save" />
+
+        </p>
+
+    </fieldset>
+
+}
