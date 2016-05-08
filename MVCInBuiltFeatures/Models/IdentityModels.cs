@@ -13,5 +13,13 @@ namespace MVCInBuiltFeatures.Models
             : base("DefaultConnection")
         {
         }
+
+        public System.Data.Entity.DbSet<MVCInBuiltFeatures.Models.Medicine> Medicines { get; set; }
+
+        public System.Data.Entity.DbSet<MVCInBuiltFeatures.Models.Appointment> Appointments { get; set; }
+
+        public System.Data.Entity.DbSet<MVCInBuiltFeatures.Models.Student> Students { get; set; }
+
+        public System.Data.Entity.DbSet<MVCInBuiltFeatures.Models.SResult> SResults { get; set; }
     }
 }

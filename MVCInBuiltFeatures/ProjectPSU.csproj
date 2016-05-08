@@ -218,90 +218,6 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201603131643536_InitialCreate.cs" />
-    <Compile Include="Migrations\201603131643536_InitialCreate.Designer.cs">
-      <DependentUpon>201603131643536_InitialCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201603151318455_info.cs" />
-    <Compile Include="Migrations\201603151318455_info.Designer.cs">
-      <DependentUpon>201603151318455_info.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201603290919185_med.cs" />
-    <Compile Include="Migrations\201603290919185_med.Designer.cs">
-      <DependentUpon>201603290919185_med.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201603290923496_editmed.cs" />
-    <Compile Include="Migrations\201603290923496_editmed.Designer.cs">
-      <DependentUpon>201603290923496_editmed.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201603311526031_editSResultID.cs" />
-    <Compile Include="Migrations\201603311526031_editSResultID.Designer.cs">
-      <DependentUpon>201603311526031_editSResultID.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201603311547196_editPrimaryKeyStudent.cs" />
-    <Compile Include="Migrations\201603311547196_editPrimaryKeyStudent.Designer.cs">
-      <DependentUpon>201603311547196_editPrimaryKeyStudent.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201603311552468_deleteIdStudent.cs" />
-    <Compile Include="Migrations\201603311552468_deleteIdStudent.Designer.cs">
-      <DependentUpon>201603311552468_deleteIdStudent.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201603311610285_editPrimaryKeyStudent1.cs" />
-    <Compile Include="Migrations\201603311610285_editPrimaryKeyStudent1.Designer.cs">
-      <DependentUpon>201603311610285_editPrimaryKeyStudent1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201603311613499_editPrimatyKeyStudent2.cs" />
-    <Compile Include="Migrations\201603311613499_editPrimatyKeyStudent2.Designer.cs">
-      <DependentUpon>201603311613499_editPrimatyKeyStudent2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201604161648324_EditDB.cs" />
-    <Compile Include="Migrations\201604161648324_EditDB.Designer.cs">
-      <DependentUpon>201604161648324_EditDB.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201604161715524_DeleteSResult.cs" />
-    <Compile Include="Migrations\201604161715524_DeleteSResult.Designer.cs">
-      <DependentUpon>201604161715524_DeleteSResult.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201604161718272_AddSResult.cs" />
-    <Compile Include="Migrations\201604161718272_AddSResult.Designer.cs">
-      <DependentUpon>201604161718272_AddSResult.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201604161741507_EditMoreComplex.cs" />
-    <Compile Include="Migrations\201604161741507_EditMoreComplex.Designer.cs">
-      <DependentUpon>201604161741507_EditMoreComplex.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201605061628560_newMed.cs" />
-    <Compile Include="Migrations\201605061628560_newMed.Designer.cs">
-      <DependentUpon>201605061628560_newMed.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201605071416121_editMed2.cs" />
-    <Compile Include="Migrations\201605071416121_editMed2.Designer.cs">
-      <DependentUpon>201605071416121_editMed2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201605071714440_editDBCom.cs" />
-    <Compile Include="Migrations\201605071714440_editDBCom.Designer.cs">
-      <DependentUpon>201605071714440_editDBCom.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201605071728431_editDBCom2.cs" />
-    <Compile Include="Migrations\201605071728431_editDBCom2.Designer.cs">
-      <DependentUpon>201605071728431_editDBCom2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201605071735205_1.cs" />
-    <Compile Include="Migrations\201605071735205_1.Designer.cs">
-      <DependentUpon>201605071735205_1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201605071736430_2.cs" />
-    <Compile Include="Migrations\201605071736430_2.Designer.cs">
-      <DependentUpon>201605071736430_2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201605071739354_3.cs" />
-    <Compile Include="Migrations\201605071739354_3.Designer.cs">
-      <DependentUpon>201605071739354_3.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201605072038477_5.cs" />
-    <Compile Include="Migrations\201605072038477_5.Designer.cs">
-      <DependentUpon>201605072038477_5.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -481,11 +397,6 @@
     <Content Include="Views\Roles\Index.cshtml" />
     <Content Include="Views\Roles\Edit.cshtml" />
     <Content Include="Views\Roles\ManageUserRoles.cshtml" />
-    <Content Include="Views\Appointments\Create.cshtml" />
-    <Content Include="Views\Appointments\Delete.cshtml" />
-    <Content Include="Views\Appointments\Details.cshtml" />
-    <Content Include="Views\Appointments\Edit.cshtml" />
-    <Content Include="Views\Appointments\Index.cshtml" />
     <Content Include="Views\History\Index.cshtml" />
     <Content Include="Site.Master" />
     <Content Include="Site.Mobile.Master" />
@@ -518,16 +429,21 @@
     <Content Include="Views\LoginStatus\Details.cshtml" />
     <Content Include="Views\LoginStatus\Edit.cshtml" />
     <Content Include="Views\LoginStatus\Index.cshtml" />
-    <Content Include="Views\Medicines\Create.cshtml" />
-    <Content Include="Views\Medicines\Delete.cshtml" />
-    <Content Include="Views\Medicines\Details.cshtml" />
-    <Content Include="Views\Medicines\Edit.cshtml" />
-    <Content Include="Views\Medicines\Index.cshtml" />
     <Content Include="Views\Students\Create.cshtml" />
     <Content Include="Views\Students\Delete.cshtml" />
     <Content Include="Views\Students\Details.cshtml" />
     <Content Include="Views\Students\Edit.cshtml" />
     <Content Include="Views\Students\Index.cshtml" />
+    <Content Include="Views\Medicines\Create.cshtml" />
+    <Content Include="Views\Medicines\Delete.cshtml" />
+    <Content Include="Views\Medicines\Details.cshtml" />
+    <Content Include="Views\Medicines\Edit.cshtml" />
+    <Content Include="Views\Medicines\Index.cshtml" />
+    <Content Include="Views\Appointments\Create.cshtml" />
+    <Content Include="Views\Appointments\Delete.cshtml" />
+    <Content Include="Views\Appointments\Details.cshtml" />
+    <Content Include="Views\Appointments\Edit.cshtml" />
+    <Content Include="Views\Appointments\Index.cshtml" />
     <Content Include="Views\SResults\Create.cshtml" />
     <Content Include="Views\SResults\Delete.cshtml" />
     <Content Include="Views\SResults\Details.cshtml" />
@@ -557,69 +473,6 @@
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201603131643536_InitialCreate.resx">
-      <DependentUpon>201603131643536_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201603151318455_info.resx">
-      <DependentUpon>201603151318455_info.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201603290919185_med.resx">
-      <DependentUpon>201603290919185_med.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201603290923496_editmed.resx">
-      <DependentUpon>201603290923496_editmed.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201603311526031_editSResultID.resx">
-      <DependentUpon>201603311526031_editSResultID.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201603311547196_editPrimaryKeyStudent.resx">
-      <DependentUpon>201603311547196_editPrimaryKeyStudent.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201603311552468_deleteIdStudent.resx">
-      <DependentUpon>201603311552468_deleteIdStudent.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201603311610285_editPrimaryKeyStudent1.resx">
-      <DependentUpon>201603311610285_editPrimaryKeyStudent1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201603311613499_editPrimatyKeyStudent2.resx">
-      <DependentUpon>201603311613499_editPrimatyKeyStudent2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201604161648324_EditDB.resx">
-      <DependentUpon>201604161648324_EditDB.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201604161715524_DeleteSResult.resx">
-      <DependentUpon>201604161715524_DeleteSResult.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201604161718272_AddSResult.resx">
-      <DependentUpon>201604161718272_AddSResult.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201604161741507_EditMoreComplex.resx">
-      <DependentUpon>201604161741507_EditMoreComplex.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201605061628560_newMed.resx">
-      <DependentUpon>201605061628560_newMed.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201605071416121_editMed2.resx">
-      <DependentUpon>201605071416121_editMed2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201605071714440_editDBCom.resx">
-      <DependentUpon>201605071714440_editDBCom.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201605071728431_editDBCom2.resx">
-      <DependentUpon>201605071728431_editDBCom2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201605071735205_1.resx">
-      <DependentUpon>201605071735205_1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201605071736430_2.resx">
-      <DependentUpon>201605071736430_2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201605071739354_3.resx">
-      <DependentUpon>201605071739354_3.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201605072038477_5.resx">
-      <DependentUpon>201605072038477_5.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Report\Report1.rdlc" />
   </ItemGroup>
   <PropertyGroup>

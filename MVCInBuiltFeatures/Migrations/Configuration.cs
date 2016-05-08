@@ -10,7 +10,7 @@ namespace MVCInBuiltFeatures.Migrations
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
-            ContextKey = "MVCInBuiltFeatures.Models.MedicalDBContext";
+            ContextKey = "MVCInBuiltFeatures.Models.ApplicationDbContext";
         }
 
         protected override void Seed(MVCInBuiltFeatures.Models.MedicalDBContext context)

@@ -31,7 +31,7 @@ namespace MVCInBuiltFeatures.Controllers
                 var r = new RolesViewModel()
                 {
                     UserName = user.UserName,
-             
+
                 };
                 userRoles.Add(r);
             }
@@ -54,7 +54,7 @@ namespace MVCInBuiltFeatures.Controllers
         {
 
             var users = context.Users.ToList();
-           
+
             return View(users);
 
         }
@@ -88,7 +88,7 @@ namespace MVCInBuiltFeatures.Controllers
             try
             {
                 context.Roles.Add(new Microsoft.AspNet.Identity.EntityFramework.IdentityRole()
-              
+
                 {
                     Name = collection["RoleName"]
                 });
@@ -154,7 +154,7 @@ namespace MVCInBuiltFeatures.Controllers
         public ActionResult ManageUserRoles()
         {
             var list = context.Roles.OrderBy(r => r.Name).ToList().Select(rr => new SelectListItem { Value = rr.Name.ToString(), Text = rr.Name }).ToList();
-            ViewBag.Roles = list;            
+            ViewBag.Roles = list;
             return View();
         }
 
@@ -165,12 +165,12 @@ namespace MVCInBuiltFeatures.Controllers
             ApplicationUser user = context.Users.Where(u => u.UserName.Equals(UserName, StringComparison.CurrentCultureIgnoreCase)).FirstOrDefault();
             var account = new AccountController();
             account.UserManager.AddToRole(user.Id, RoleName);
-            
+
             ViewBag.ResultMessage = "Role created successfully !";
-            
+
             // prepopulat roles for the view dropdown
             var list = context.Roles.OrderBy(r => r.Name).ToList().Select(rr => new SelectListItem { Value = rr.Name.ToString(), Text = rr.Name }).ToList();
-            ViewBag.Roles = list;   
+            ViewBag.Roles = list;
 
             return View("ManageUserRoles");
         }
@@ -178,7 +178,7 @@ namespace MVCInBuiltFeatures.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult GetRoles(string UserName)
-        {            
+        {
             if (!string.IsNullOrWhiteSpace(UserName))
             {
                 ApplicationUser user = context.Users.Where(u => u.UserName.Equals(UserName, StringComparison.CurrentCultureIgnoreCase)).FirstOrDefault();
@@ -188,7 +188,7 @@ namespace MVCInBuiltFeatures.Controllers
 
                 // prepopulat roles for the view dropdown
                 var list = context.Roles.OrderBy(r => r.Name).ToList().Select(rr => new SelectListItem { Value = rr.Name.ToString(), Text = rr.Name }).ToList();
-                ViewBag.Roles = list;            
+                ViewBag.Roles = list;
             }
 
             return View("ManageUserRoles");
@@ -201,7 +201,7 @@ namespace MVCInBuiltFeatures.Controllers
             var account = new AccountController();
             ApplicationUser user = context.Users.Where(u => u.UserName.Equals(UserName, StringComparison.CurrentCultureIgnoreCase)).FirstOrDefault();
 
-            if (account.UserManager.IsInRole(user.Id, RoleName))  
+            if (account.UserManager.IsInRole(user.Id, RoleName))
             {
                 account.UserManager.RemoveFromRole(user.Id, RoleName);
                 ViewBag.ResultMessage = "Role removed from this user successfully !";

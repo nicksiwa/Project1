@@ -12,7 +12,7 @@ namespace MVCInBuiltFeatures.Controllers
 {
     public class SResultsController : Controller
     {
-        private MedicalDBContext db = new MedicalDBContext();
+        private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: SResults
         public ActionResult Index()
@@ -48,7 +48,7 @@ namespace MVCInBuiltFeatures.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID,SResultID,result,medicine,present_illness,vital_sign,date,StudentID")] SResult sResult)
+        public ActionResult Create([Bind(Include = "ID,SResultID,result,present_illness,vital_sign,date,Medicine_MedicineID,StudentID")] SResult sResult)
         {
             if (ModelState.IsValid)
             {
@@ -82,7 +82,7 @@ namespace MVCInBuiltFeatures.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ID,SResultID,result,medicine,present_illness,vital_sign,date,StudentID")] SResult sResult)
+        public ActionResult Edit([Bind(Include = "ID,SResultID,result,present_illness,vital_sign,date,Medicine_MedicineID,StudentID")] SResult sResult)
         {
             if (ModelState.IsValid)
             {

@@ -33,140 +33,18 @@
         <div class="form-group">
             @Html.LabelFor(model => model.MedType, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-               @{
-    List<SelectListItem> listItems = new List<SelectListItem>();
-    listItems.Add(new SelectListItem
-         {
-             Text = "ยาเม็ด",
-             Value = "ยาเม็ด"
-         });
-    listItems.Add(new SelectListItem
-         {
-             Text = "ยาแคปซูล",
-             Value = "ยาแคปซูล",
-             Selected = true
-         });
-    listItems.Add(new SelectListItem
-         {
-             Text = "ยาชนิดน้ำ",
-             Value = "ยาชนิดน้ำ"
-         });
-    listItems.Add(new SelectListItem
-    {
-        Text = "ยาทาผิวหนัง",
-        Value = "ยาทาผิวหนัง"
-    });
-    listItems.Add(new SelectListItem
-    {
-        Text = "ยาทถูนวด",
-        Value = "ยาทถูนวด"
-    });
-    listItems.Add(new SelectListItem
-    {
-        Text = "ยาหยอดตา",
-        Value = "ยาหยอดตา"
-    });
-    listItems.Add(new SelectListItem
-    {
-        Text = "ยาสูดพ่นเข้าทางปาก",
-        Value = "ยาสูดพ่นเข้าทางปาก"
-    });
-    listItems.Add(new SelectListItem
-    {
-        Text = "ยาอม",
-        Value = "ยาอม"
-    });
-    listItems.Add(new SelectListItem
-    {
-        Text = "ยาผง",
-        Value = "ยาผง"
-    });
-    listItems.Add(new SelectListItem
-    {
-        Text = "อื่นๆ",
-        Value = "อื่นๆ"
-    });    
-            }
-
-            @Html.DropDownListFor(model => model.MedType, listItems, "-- เลือกประเภทยา --")
-            
+                @Html.EditorFor(model => model.MedType)
                 @Html.ValidationMessageFor(model => model.MedType)
-
-
             </div>
         </div>
-
-
 
         <div class="form-group">
             @Html.LabelFor(model => model.MedGroup, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @{
-    List<SelectListItem> listItems2 = new List<SelectListItem>();
-    listItems2.Add(new SelectListItem
-         {
-             Text = "ยาบรรเทาปวด",
-             Value = "ยาบรรเทาปวด"
-         });
-    listItems2.Add(new SelectListItem
-         {
-             Text = "ยาแก้ไข",
-             Value = "ยาแก้ไข",
-             Selected = true
-         });
-    listItems2.Add(new SelectListItem
-         {
-             Text = "ยาลดไข้",
-             Value = "ยาลดไข้"
-         });
-    listItems2.Add(new SelectListItem
-    {
-        Text = "ยาแก้คัดจมูก",
-        Value = "ยาแก้คัดจมูก"
-    });
-    listItems2.Add(new SelectListItem
-    {
-        Text = "ยาต้านไวรัส",
-        Value = "ยาต้านไวรัส"
-    });
-    listItems2.Add(new SelectListItem
-    {
-        Text = "ยาปฏิชีวนะ‎",
-        Value = "ยาปฏิชีวนะ‎"
-    });
-    listItems2.Add(new SelectListItem
-    {
-        Text = "ยาระบาย",
-        Value = "ยาระบาย"
-    });
-    listItems2.Add(new SelectListItem
-    {
-        Text = "วัคซีน",
-        Value = "วัคซีน"
-    });
-    listItems2.Add(new SelectListItem
-    {
-        Text = "ยาลดกรด",
-        Value = "ยาลดกรด"
-    });
-    listItems2.Add(new SelectListItem
-    {
-        Text = "อื่นๆ",
-        Value = "อื่นๆ"
-    });
-                }
-
-                @Html.DropDownListFor(model => model.MedGroup, listItems2, "-- เลือกหมวดยา --")
-
-                 @Html.ValidationMessageFor(model => model.MedGroup)
-           
-             </div>
+                @Html.EditorFor(model => model.MedGroup)
+                @Html.ValidationMessageFor(model => model.MedGroup)
+            </div>
         </div>
-
-
-
-       
-
 
         <div class="form-group">
             @Html.LabelFor(model => model.Rem, htmlAttributes: new { @class = "control-label col-md-2" })
@@ -179,60 +57,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.Unit, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @{
-    List<SelectListItem> listItems3 = new List<SelectListItem>();
-    listItems3.Add(new SelectListItem
-         {
-             Text = "เม็ด",
-             Value = "เม็ด"
-         });
-    listItems3.Add(new SelectListItem
-         {
-             Text = "ขวด",
-             Value = "ขวด",
-             Selected = true
-         });
-    listItems3.Add(new SelectListItem
-         {
-             Text = "กล่อง",
-             Value = "กล่อง"
-         });
-    listItems3.Add(new SelectListItem
-    {
-        Text = "กระปุก",
-        Value = "กระปุก"
-    });
-    listItems3.Add(new SelectListItem
-    {
-        Text = "แคปซูล",
-        Value = "แคปซูล"
-    });
-    listItems3.Add(new SelectListItem
-    {
-        Text = "ตลับ‎",
-        Value = "ตลับ‎"
-    });
-    listItems3.Add(new SelectListItem
-    {
-        Text = "แผง",
-        Value = "แผง"
-    });
-    listItems3.Add(new SelectListItem
-    {
-        Text = "มิลลิลิตร",
-        Value = "มิลลิลิตร"
-    });
-    listItems3.Add(new SelectListItem
-    {
-        Text = "กรัม",
-        Value = "กรัม"
-    });
-
-                }
-
-                @Html.DropDownListFor(model => model.Unit, listItems3, "-- เลือกหน่วยยา --")
-
-
+                @Html.EditorFor(model => model.Unit)
                 @Html.ValidationMessageFor(model => model.Unit)
             </div>
         </div>

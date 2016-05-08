@@ -12,19 +12,13 @@ namespace MVCInBuiltFeatures.Controllers
 {
     public class AppointmentsController : Controller
     {
-        private MedicalDBContext db = new MedicalDBContext();
+        private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: Appointments
-        public ActionResult Index(string searchString)
+        public ActionResult Index()
         {
-            var appointments = from m in db.Appointments
-                           select m;
-            if (!String.IsNullOrEmpty(searchString))
-            {
-                appointments = appointments.Where(s => s.sid.Contains(searchString));
-            }
-            return View(appointments);
-
+            var appointments = db.Appointments.Include(a => a.Student);
+            return View(appointments.ToList());
         }
 
         // GET: Appointments/Details/5
@@ -45,6 +39,7 @@ namespace MVCInBuiltFeatures.Controllers
         // GET: Appointments/Create
         public ActionResult Create()
         {
+            ViewBag.StudentID = new SelectList(db.Students, "StudentID", "sid_t");
             return View();
         }
 
@@ -53,7 +48,7 @@ namespace MVCInBuiltFeatures.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID,sid,topic,date,des")] Appointment appointment)
+        public ActionResult Create([Bind(Include = "AppointmentID,topic,date,des,StudentID")] Appointment appointment)
         {
             if (ModelState.IsValid)
             {
@@ -62,6 +57,7 @@ namespace MVCInBuiltFeatures.Controllers
                 return RedirectToAction("Index");
             }
 
+            ViewBag.StudentID = new SelectList(db.Students, "StudentID", "sid_t", appointment.StudentID);
             return View(appointment);
         }
 
@@ -77,6 +73,7 @@ namespace MVCInBuiltFeatures.Controllers
             {
                 return HttpNotFound();
             }
+            ViewBag.StudentID = new SelectList(db.Students, "StudentID", "sid_t", appointment.StudentID);
             return View(appointment);
         }
 
@@ -85,7 +82,7 @@ namespace MVCInBuiltFeatures.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ID,sid,topic,date,des")] Appointment appointment)
+        public ActionResult Edit([Bind(Include = "AppointmentID,topic,date,des,StudentID")] Appointment appointment)
         {
             if (ModelState.IsValid)
             {
@@ -93,6 +90,7 @@ namespace MVCInBuiltFeatures.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
+            ViewBag.StudentID = new SelectList(db.Students, "StudentID", "sid_t", appointment.StudentID);
             return View(appointment);
         }
 
