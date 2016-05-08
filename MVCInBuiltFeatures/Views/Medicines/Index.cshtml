@@ -23,8 +23,6 @@
         <th>
             @Html.DisplayNameFor(model => model.MedGroup)
         </th>
-       
-       
         <th>
             @Html.DisplayNameFor(model => model.Rem)
         </th>
@@ -48,8 +46,6 @@
         <td>
             @Html.DisplayFor(modelItem => item.MedGroup)
         </td>
-        
-      
         <td>
             @Html.DisplayFor(modelItem => item.Rem)
         </td>
@@ -57,9 +53,9 @@
             @Html.DisplayFor(modelItem => item.Unit)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+            @Html.ActionLink("Edit", "Edit", new { id=item.MedicineID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.MedicineID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.MedicineID })
         </td>
     </tr>
 }

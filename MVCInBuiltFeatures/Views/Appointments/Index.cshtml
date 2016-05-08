@@ -1,93 +1,53 @@
 ﻿@model IEnumerable<MVCInBuiltFeatures.Models.Appointment>
 
+@{
+    ViewBag.Title = "Index";
+}
 
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> - My ASP.NET Application</title>
-    <link href="/Content/bootstrap.css" rel="stylesheet" />
-    <link href="/Content/site.css" rel="stylesheet" />
+<h2>Index</h2>
 
-    <script src="/Scripts/modernizr-2.6.2.js"></script>
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Student.sid_t)
+        </th>
+ 
+        <th>
+            @Html.DisplayNameFor(model => model.topic)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.des)
+        </th>
+        <th></th>
+    </tr>
 
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Student.sid_t)
+        </td>
+   
+        <td>
+            @Html.DisplayFor(modelItem => item.topic)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.date)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.des)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.AppointmentID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.AppointmentID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.AppointmentID })
+        </td>
+    </tr>
+}
 
-</head>
-<body>
-    @{
-        ViewBag.Title = "Index";
-    }
-
-    <h2>Index</h2>
-
-    @using (Html.BeginForm("Index", "Appointments", FormMethod.Get))
-    {
-        <p>
-            Title: @Html.TextBox("SearchString")
-            <input type="submit" value="ค้นหาโดยรหัสนักศึกษา" />
-        </p>
-    }
-
-    <p>
-        @Html.ActionLink("Create New", "Create")
-    </p>
-    <table class="table">
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.sid)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.topic)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.date)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.des)
-            </th>
-            <th></th>
-        </tr>
-
-        @foreach (var item in Model)
-        {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.sid)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.topic)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.date)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.des)
-                </td>
-                <td>
-                    @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
-                    @Html.ActionLink("Details", "Details", new { id = item.ID }) |
-                    @Html.ActionLink("Delete", "Delete", new { id = item.ID })
-                </td>
-            </tr>
-        }
-
-    </table>
-
-
-    <script src="/Scripts/jquery-1.10.2.js"></script>
-
-    <script src="/Scripts/bootstrap.js"></script>
-    <script src="/Scripts/respond.js"></script>
-
-
-
-    <!-- Visual Studio Browser Link -->
-    <script type="application/json" id="__browserLink_initializationData">
-        {"appName":"Chrome","requestId":"a1aac872be674e44a325f48d4ad4d00a"}
-    </script>
-    <script type="text/javascript" src="http://localhost:1294/bfd74f6f71cb410d982e2638f7b052a8/browserLink" async="async"></script>
-    <!-- End Browser Link -->
-
-</body>
-</html>
+</table>

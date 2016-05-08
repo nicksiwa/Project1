@@ -9,13 +9,7 @@ namespace MVCInBuiltFeatures.Controllers
 {
     public class Item
     {
-        private Medicine med = new Medicine();
-
-        public Medicine Med
-        {
-            get { return med; }
-            set { med = value; }
-        }
+        
         private int quantity;
 
         public int Quantity
@@ -26,10 +20,6 @@ namespace MVCInBuiltFeatures.Controllers
 
         public Item() { }
 
-        public Item(Medicine med, int quantity) 
-        {
-            this.med = med;
-            this.quantity = quantity;
-        }
+        
     }
 }
