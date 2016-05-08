@@ -71,7 +71,6 @@ namespace MVCInBuiltFeatures.Controllers
         {
             var roles = context.Roles.ToList();
             return View(roles);
-
         }
 
         //
@@ -88,7 +87,6 @@ namespace MVCInBuiltFeatures.Controllers
         {
             try
             {
-    
                 context.Roles.Add(new Microsoft.AspNet.Identity.EntityFramework.IdentityRole()
               
                 {

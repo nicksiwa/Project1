@@ -13,7 +13,5 @@ namespace MVCInBuiltFeatures.Models
             : base("DefaultConnection")
         {
         }
-
-        public System.Data.Entity.DbSet<MVCInBuiltFeatures.Models.ApplicationUser> IdentityUsers { get; set; }
     }
 }
