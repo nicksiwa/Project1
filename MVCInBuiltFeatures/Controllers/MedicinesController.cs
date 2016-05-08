@@ -46,7 +46,7 @@ namespace MVCInBuiltFeatures.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "MedicineID,MedName,MedTrade,MedType,MedGroup,Rem,Unit")] Medicine medicine)
+        public ActionResult Create([Bind(Include = "ID,MedName,MedTrade,MedType,MedGroup,GrouList,GrouCon,Rem,Unit")] Medicine medicine)
         {
             if (ModelState.IsValid)
             {
@@ -78,7 +78,7 @@ namespace MVCInBuiltFeatures.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "MedicineID,MedName,MedTrade,MedType,MedGroup,Rem,Unit")] Medicine medicine)
+        public ActionResult Edit([Bind(Include = "ID,MedName,MedTrade,MedType,MedGroup,GrouList,GrouCon,Rem,Unit")] Medicine medicine)
         {
             if (ModelState.IsValid)
             {

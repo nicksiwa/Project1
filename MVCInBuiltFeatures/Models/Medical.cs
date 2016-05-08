@@ -37,14 +37,15 @@ namespace MVCInBuiltFeatures.Models
         public string con_disease { get; set; }
 
         public virtual ICollection<SResult> SResults { get; set; }
-        public virtual ICollection<Appointment> Appointments { get; set; }
-
     }
 
+  
 
     public class Appointment
     {
-        public int AppointmentID { get; set; }
+        public int ID { get; set; }
+        [Display(Name = "รหัสนักศึกษา")]
+        public string sid { get; set; }
         [Display(Name = "เรื่อง")]
         public string topic { get; set; }
         [Display(Name = "วัน/เวลาที่นัดหมาย")]
@@ -53,13 +54,7 @@ namespace MVCInBuiltFeatures.Models
         public DateTime date { get; set; }
         [Display(Name = "หมายเหตุ")]
         public string des { get; set; }
-        [Display(Name = "รหัสนักศึกษา")]
-        public int StudentID { get; set; }
-        public virtual Student Student { get; set; }
-
     }
-
-  
 
     public class Info  
     {
@@ -73,10 +68,9 @@ namespace MVCInBuiltFeatures.Models
     }
 
 
-    public class Medicine
+    public class Medicine 
     {
-
-        public int MedicineID { get; set; }
+        public int ID { get; set; }
         [Display(Name = "ชื่อสามัญทางยา")]
         public string MedName { get; set; }
         [Display(Name = "ชื่อทางการค้า")]
@@ -90,10 +84,9 @@ namespace MVCInBuiltFeatures.Models
         [Display(Name = "หน่วย")]
         public string Unit { get; set; }
 
-        public virtual ICollection<SResult> SResults { get; set; }
-
+     
+        
     }
-    
 
     public class LoginStatus 
     {
@@ -112,7 +105,8 @@ namespace MVCInBuiltFeatures.Models
         public int SResultID { get; set; }
         [Display(Name = "วินิจฉัย")]
         public string result { get; set; }
-        
+        [Display(Name = "ยารักษา")]
+        public string medicine { get; set; }
         [Display(Name = "อาการที่มาพบ")]
         public string present_illness { get; set; }
         [Display(Name = "ตรวจร่างกาย")]
@@ -123,12 +117,9 @@ namespace MVCInBuiltFeatures.Models
         public DateTime date { get; set; }
 
 
-        public int Medicine_MedicineID { get; set; }
-        public virtual Medicine Medicine { get; set; }
 
         public int StudentID { get; set; }
         public virtual Student Student { get; set; }
-
 
     }
 

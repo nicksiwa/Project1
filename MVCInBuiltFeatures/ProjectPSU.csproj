@@ -302,50 +302,6 @@
     <Compile Include="Migrations\201605072038477_5.Designer.cs">
       <DependentUpon>201605072038477_5.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201605072211210_dffff.cs" />
-    <Compile Include="Migrations\201605072211210_dffff.Designer.cs">
-      <DependentUpon>201605072211210_dffff.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201605072212386_asdsafass.cs" />
-    <Compile Include="Migrations\201605072212386_asdsafass.Designer.cs">
-      <DependentUpon>201605072212386_asdsafass.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201605072213478_aaaaa.cs" />
-    <Compile Include="Migrations\201605072213478_aaaaa.Designer.cs">
-      <DependentUpon>201605072213478_aaaaa.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201605072217128_dddddd.cs" />
-    <Compile Include="Migrations\201605072217128_dddddd.Designer.cs">
-      <DependentUpon>201605072217128_dddddd.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201605072228543_dfdsfds.cs" />
-    <Compile Include="Migrations\201605072228543_dfdsfds.Designer.cs">
-      <DependentUpon>201605072228543_dfdsfds.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201605072230592_gfdgdfg.cs" />
-    <Compile Include="Migrations\201605072230592_gfdgdfg.Designer.cs">
-      <DependentUpon>201605072230592_gfdgdfg.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201605072321371_sf.cs" />
-    <Compile Include="Migrations\201605072321371_sf.Designer.cs">
-      <DependentUpon>201605072321371_sf.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201605072322440_sg.cs" />
-    <Compile Include="Migrations\201605072322440_sg.Designer.cs">
-      <DependentUpon>201605072322440_sg.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201605072329454_qw.cs" />
-    <Compile Include="Migrations\201605072329454_qw.Designer.cs">
-      <DependentUpon>201605072329454_qw.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201605072337374_asasas.cs" />
-    <Compile Include="Migrations\201605072337374_asasas.Designer.cs">
-      <DependentUpon>201605072337374_asasas.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201605072339306_asfff.cs" />
-    <Compile Include="Migrations\201605072339306_asfff.Designer.cs">
-      <DependentUpon>201605072339306_asfff.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -525,6 +481,11 @@
     <Content Include="Views\Roles\Index.cshtml" />
     <Content Include="Views\Roles\Edit.cshtml" />
     <Content Include="Views\Roles\ManageUserRoles.cshtml" />
+    <Content Include="Views\Appointments\Create.cshtml" />
+    <Content Include="Views\Appointments\Delete.cshtml" />
+    <Content Include="Views\Appointments\Details.cshtml" />
+    <Content Include="Views\Appointments\Edit.cshtml" />
+    <Content Include="Views\Appointments\Index.cshtml" />
     <Content Include="Views\History\Index.cshtml" />
     <Content Include="Site.Master" />
     <Content Include="Site.Mobile.Master" />
@@ -557,6 +518,11 @@
     <Content Include="Views\LoginStatus\Details.cshtml" />
     <Content Include="Views\LoginStatus\Edit.cshtml" />
     <Content Include="Views\LoginStatus\Index.cshtml" />
+    <Content Include="Views\Medicines\Create.cshtml" />
+    <Content Include="Views\Medicines\Delete.cshtml" />
+    <Content Include="Views\Medicines\Details.cshtml" />
+    <Content Include="Views\Medicines\Edit.cshtml" />
+    <Content Include="Views\Medicines\Index.cshtml" />
     <Content Include="Views\Students\Create.cshtml" />
     <Content Include="Views\Students\Delete.cshtml" />
     <Content Include="Views\Students\Details.cshtml" />
@@ -567,16 +533,6 @@
     <Content Include="Views\SResults\Details.cshtml" />
     <Content Include="Views\SResults\Edit.cshtml" />
     <Content Include="Views\SResults\Index.cshtml" />
-    <Content Include="Views\Appointments\Create.cshtml" />
-    <Content Include="Views\Appointments\Delete.cshtml" />
-    <Content Include="Views\Appointments\Details.cshtml" />
-    <Content Include="Views\Appointments\Edit.cshtml" />
-    <Content Include="Views\Appointments\Index.cshtml" />
-    <Content Include="Views\Medicines\Create.cshtml" />
-    <Content Include="Views\Medicines\Delete.cshtml" />
-    <Content Include="Views\Medicines\Details.cshtml" />
-    <Content Include="Views\Medicines\Edit.cshtml" />
-    <Content Include="Views\Medicines\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -663,39 +619,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201605072038477_5.resx">
       <DependentUpon>201605072038477_5.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201605072211210_dffff.resx">
-      <DependentUpon>201605072211210_dffff.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201605072212386_asdsafass.resx">
-      <DependentUpon>201605072212386_asdsafass.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201605072213478_aaaaa.resx">
-      <DependentUpon>201605072213478_aaaaa.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201605072217128_dddddd.resx">
-      <DependentUpon>201605072217128_dddddd.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201605072228543_dfdsfds.resx">
-      <DependentUpon>201605072228543_dfdsfds.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201605072230592_gfdgdfg.resx">
-      <DependentUpon>201605072230592_gfdgdfg.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201605072321371_sf.resx">
-      <DependentUpon>201605072321371_sf.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201605072322440_sg.resx">
-      <DependentUpon>201605072322440_sg.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201605072329454_qw.resx">
-      <DependentUpon>201605072329454_qw.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201605072337374_asasas.resx">
-      <DependentUpon>201605072337374_asasas.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201605072339306_asfff.resx">
-      <DependentUpon>201605072339306_asfff.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Report\Report1.rdlc" />
   </ItemGroup>

@@ -31,10 +31,10 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.Medicine_MedicineID, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.medicine, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.Medicine_MedicineID)
-                @Html.ValidationMessageFor(model => model.Medicine_MedicineID)
+                @Html.EditorFor(model => model.medicine)
+                @Html.ValidationMessageFor(model => model.medicine)
             </div>
         </div>
 

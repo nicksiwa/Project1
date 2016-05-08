@@ -33,7 +33,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.MedType, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @{
+               @{
     List<SelectListItem> listItems = new List<SelectListItem>();
     listItems.Add(new SelectListItem
          {
@@ -85,16 +85,17 @@
     {
         Text = "อื่นๆ",
         Value = "อื่นๆ"
-    });
-                }
+    });    
+            }
 
-                @Html.DropDownListFor(model => model.MedType, listItems, "-- เลือกประเภทยา --")
-
+            @Html.DropDownListFor(model => model.MedType, listItems, "-- เลือกประเภทยา --")
+            
                 @Html.ValidationMessageFor(model => model.MedType)
 
 
             </div>
         </div>
+
 
 
         <div class="form-group">
@@ -157,10 +158,15 @@
 
                 @Html.DropDownListFor(model => model.MedGroup, listItems2, "-- เลือกหมวดยา --")
 
-                @Html.ValidationMessageFor(model => model.MedGroup)
-
-            </div>
+                 @Html.ValidationMessageFor(model => model.MedGroup)
+           
+             </div>
         </div>
+
+
+
+       
+
 
         <div class="form-group">
             @Html.LabelFor(model => model.Rem, htmlAttributes: new { @class = "control-label col-md-2" })
